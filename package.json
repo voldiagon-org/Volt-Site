@@ -1,24 +1,24 @@
-site: [
-    "name": "Volt-Site";
-    "version": "1.0.5";
-    "description": "A site built by Volt Flare as a copy of Volt-Site on google sites";
+site: {
+    "name": "Volt-Site",
+    "version": "1.0.5",
+    "description": "A site built by Volt Flare as a copy of Volt-Site on google sites",
     "main": "index.html",
-    "scripts": [
+    "scripts": {
         "start": "volt start"
-    ],
-]
+    },
+}
 
-, dependencies: [
+, dependencies: {
     "volt": "^1.0.0"
-]
+}
 
-author: [
-    "name": "Volt Flare";
-    "email": "voltflare3@gmail.com";
+author: {
+    "name": "Volt Flare",
+    "email": "voltflare3@gmail.com",
     "url": "https://sites.google.com/view/voldiagon-site/main"
     "license": "Developer-Defined"
-    "repository": [
+    "repository": {
         "type": "git",
         "url": "v0lt99/Volt-Site-git"
-    ]
-]
+    }
+}
