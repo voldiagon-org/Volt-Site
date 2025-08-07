@@ -19,27 +19,16 @@
 <body style="font-family: Arial, sans-serif; background-color: #000000; color: #fefefe; margin: 0; padding: 0;">
     <header>
         <h1>Volt Site</h1>
-        <a href="?navigation=open" onclick="Nav()">
-            <button class="btn">View Navigation</button>
-        </a>
+        <a href="#" onclick="toggleNav()">View Navigation</a>
 
-        <div id="nav">
-            <ul>
-            <li><a href="content.html">
-                <button class="btn">Content</button>
-            </a></li>
-        
-            <li><a href="updates.html">
-                <button class="btn">Update Log</button>
-            </a></li>
-        
-            <li><a href="extra.html">
-                <button class="btn">Extra</button>
-            </a></li>
-            <li><button onclick="download()" class="btn">Volt Site Offline</button>
-            <div id="message"></div></li>
-            </ul>
-        </div>
+        <div id="navigation" style="display: none; margin-top: 10px;">
+          <!-- navigation here -->
+          <a href="content.html"><button>Content</button></a><br>
+          <a href="updates.html"><button>Update Log</button></a><br>
+          <a href="extra.html"><button>Extra</button></a><br>
+          <button onclick="download()">Volt Site Offline</button>
+          <div id="message"></div>
+</div>
     </header>
     <main>
         <section>
@@ -66,8 +55,8 @@
     alert('✅ Successfully downloaded!<br>Unzip & view 'Volt-Site.html' that you downloaded to view "Volt-Site_Offine');
   });
 
-  function Nav() {
-    const nav = document.getElementById('nav');
+  function toggleNav() {
+    const nav = document.getElementById('navigation');
     nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
   }
 </script>
