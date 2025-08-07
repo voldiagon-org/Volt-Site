@@ -5,3 +5,9 @@
     border-radius: 10px;
     color: #fefefe;
 }
+
+.btn:focus
+{
+    padding: 10px 20px;
+    outline: #000000;
+}
