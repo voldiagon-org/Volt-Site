@@ -19,7 +19,7 @@
 <body style="font-family: Arial, sans-serif; background-color: #000000; color: #fefefe; margin: 0; padding: 0;">
     <header>
         <h1>Volt Site</h1>
-        <a href="#" onclick="toggleNav()">
+        <a href="?navigation=open" onclick="toggleNav()">
             <button class="btn">View Navigation</button>
         </a>
 
@@ -68,6 +68,11 @@
       Unzip & view the 'Volt-Site.html' that you downloaded to view "Volt-Site_Offine"
     `;
   });
+
+  function toggleNav() {
+    const nav = document.getElementById('navigation');
+    nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+  }
 </script>
 <script src="script.js">
 </html>
