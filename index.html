@@ -19,11 +19,11 @@
 <body style="font-family: Arial, sans-serif; background-color: #000000; color: #fefefe; margin: 0; padding: 0;">
     <header>
         <h1>Volt Site</h1>
-        <a href="?navigation=open" onclick="toggleNav()">
+        <a href="?navigation=open" onclick="Nav()">
             <button class="btn">View Navigation</button>
         </a>
 
-        <div id="navigation">
+        <div id="nav">
             <ul>
             <li><a href="content.html">
                 <button class="btn">Content</button>
@@ -36,7 +36,7 @@
             <li><a href="extra.html">
                 <button class="btn">Extra</button>
             </a></li>
-            <li><button id="downloadBtn" class="btn">Volt Site Offline</button>
+            <li><button onclick="download()" class="btn">Volt Site Offline</button>
             <div id="message"></div></li>
             </ul>
         </div>
@@ -53,7 +53,7 @@
     </footer>
 </body>
 <script>
-  document.getElementById('downloadBtn').addEventListener('click', function() {
+  function download() {
     // Start downloading
     const link = document.createElement('a');
     link.href = 'Volt-Site.zip';  // Replace with full URL if it's ia different folder
@@ -63,14 +63,11 @@
     document.body.removeChild(link);
 
     // Show message
-    document.getElementById('message').innerHTML = `
-      ✅ Successfully downloaded!<br>
-      Unzip & view the 'Volt-Site.html' that you downloaded to view "Volt-Site_Offine"
-    `;
+    alert('✅ Successfully downloaded!<br>Unzip & view 'Volt-Site.html' that you downloaded to view "Volt-Site_Offine');
   });
 
-  function toggleNav() {
-    const nav = document.getElementById('navigation');
+  function Nav() {
+    const nav = document.getElementById('nav');
     nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
   }
 </script>
