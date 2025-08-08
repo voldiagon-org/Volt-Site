@@ -42,17 +42,15 @@
     
 <script>
   function down() {
-    // Start downloading
-    const link = document.createElement('a');
-    link.href = 'Volt-Site.zip';  // Replace with full URL if it's ia different folder
-    link.download = 'Volt-Site.zip';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const link = document.createElement('a')
+    link.href = 'Volt-Site.zip'
+    link.download = 'Volt-Site.zip'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
 
-    // Show message
-    alert("✅ Successfully downloaded, Unzip & view 'Volt-Site.html'to view "Volt-Site_Offine");
-  });
+    alert("✅ Successfully downloaded, Unzip & view 'Volt-Site.html' to view 'Volt-Site_Offline'")
+  }
 </script>
     
 </html>
