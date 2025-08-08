@@ -26,7 +26,7 @@
         <a href="content.html" class="btn"><button>Content</button></a><br>
         <a href="updates.html" class="btn"><button>Update Log</button></a><br>
         <a href="extra.html" class="btn"><button>Extra</button></a><br>
-        <button onclick="download()">Volt Site Offline</button>
+        <button onclick="down()" class="btn">Volt Site Offline</button>
         <div id="message"></div>
     </header>
     <main>
@@ -42,7 +42,7 @@
 </body>
     
 <script>
-  function download() {
+  function down() {
     // Start downloading
     const link = document.createElement('a');
     link.href = 'Volt-Site.zip';  // Replace with full URL if it's ia different folder
