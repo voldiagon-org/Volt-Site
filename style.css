@@ -1,13 +1,17 @@
 .btn
 {
-    background-color: #1400ff;
+    background-color: rgb(20, 0, 255);
     padding: 5px 15px;
     border-radius: 10px;
-    color: #fefefe;
+    color: #fefefe
+}
+
+.btn:hover
+{
+    border-radius: 5
 }
 
 .btn:focus
 {
-    padding: 10px 20px;
-    outline: #000000;
+    padding: 7px 17px
 }
