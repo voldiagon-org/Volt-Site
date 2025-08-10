@@ -1,6 +1,5 @@
 .btn
 {
-    pointer: crosshair;
     background-color: rgb(20, 0, 255);
     padding: 5px 15px;
     border-radius: 10px;
@@ -9,6 +8,7 @@
 
 .btn:hover
 {
+    cursor: crosshair;
     border-radius: 5
 }
 
