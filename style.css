@@ -1,3 +1,9 @@
+body
+{
+    background-color: #000000;
+    color: #fefefe;
+}
+
 .btn
 {
     background-color: rgba(20, 0, 255, 1);
@@ -17,3 +23,4 @@
 {
     padding: 7px 17px
 }
+
