@@ -14,7 +14,7 @@ body
 
 .btn:hover
 {
-    background-color: rgba(20, 0, 255, 0.1);
+    background-color: rgba(20, 0, 255, 0.5);
     cursor: crosshair;
     border-radius: 5
 }
