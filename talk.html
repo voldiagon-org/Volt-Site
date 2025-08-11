@@ -32,15 +32,21 @@
     .modal textarea {
       height: 100px;
     }
+
+    modal-close {
+        padding: 10px 10px;
+        background-color: #1400ff;
+        color: #000000;
+    }
   </style>
 </head>
 <body>
 
-  <button style="background-color: rgb(20, 0, 255)" onclick="openModal()">Talk to Owner</button>
+  <button class="btn" onclick="openModal()">Talk to Owner</button>
 
   <div id="popupModal" class="modal">
     <div class="modal-content">
-      <button class="btn" onclick="closeModal()">&times;</span>
+      <span class="modal-close" onclick="closeModal()">&times;</span>
       <h3 style="color: #000000">Contact Owner</h3>
 
       <!-- Replace the action URL below with your Formspree form link -->
