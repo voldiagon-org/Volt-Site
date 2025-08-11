@@ -14,13 +14,14 @@ body
 
 .btn:hover
 {
-    background-color: rgb(0, 0, 0);
-    cursor: crosshair;
+    background-color: rgba(20, 0, 255, 0.5);
+    cursor: pointer;
     border-radius: 5
 }
 
 .btn:focus
 {
+    cursor: crosshair;
     padding: 7px 17px
 }
 
