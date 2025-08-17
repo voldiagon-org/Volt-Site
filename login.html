@@ -10,13 +10,11 @@
     <div class="auth-container">
         <h2>Login to Your Account</h2>
         <form action="/login" method="POST" class="auth-form">
-            <label for="username">Username or Email</label>
-            <input type="text" id="username" name="username" required autocomplete="username">
+            <input type="text" placeholder="username" name="username" required autocomplete="username">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required autocomplete="current-password">
+            <input type="password" placeholder="password" name="password" required autocomplete="current-password">
 
-            <button type="submit">Login</button>
+            <button type="submit" class="btn">Login</button>
         </form>
         <p>Don't have an account? <a href="register.html">Register here</a>.</p>
     </div>
