@@ -4,25 +4,21 @@
     <meta charset="UTF-8">
     <title>Register - Volt Site</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="auth-container">
         <h2>Create an Account</h2>
         <form action="/register" method="POST" class="auth-form">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required autocomplete="username">
+            <input type="text" placeholder="username" name="username" required autocomplete="username">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
+            <input type="email" placeholder="email" name="email" required autocomplete="email">
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required autocomplete="new-password">
+            <input placeholder="password" type="password" id="password" name="password" required autocomplete="new-password">
 
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm_password" required autocomplete="new-password">
+            <input type="password" placeholder="confirm-password" name="confirm_password" required autocomplete="new-password">
 
-            <button type="submit">Register</button>
+            <button type="submit" class="btn">Register</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a>.</p>
     </div>
