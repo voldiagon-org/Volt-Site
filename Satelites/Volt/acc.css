@@ -26,3 +26,17 @@ body
     cursor: crosshair;
     padding: 7px 17px
 }
+
+div
+{
+    background-color: rgb(20, 0, 255);
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+}
+
+div:hover
+{
+    background-color: rgba(20, 0, 255, 0.5);
+}
+
