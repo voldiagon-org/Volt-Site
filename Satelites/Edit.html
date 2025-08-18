@@ -1,5 +1,25 @@
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function(){
+      emailjs.init("H7c8j4azSTlZwOT-O");
+    })();
+
+    function sendMail(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("volt_service", "register_real", event.target)
+        .then(() => {
+          alert("✅ Successfully saved changes! check your satelite link later");
+        }, (error) => {
+          alert("❌ Could not save: " + JSON.stringify(error));
+        });
+    }
+  </script>
+</head>
 <link rel="stylesheet" href="style.css">
-<form action="mailto:voltflare3@gmail.com" method="POST">
+<form onsubmit="sendMail(event)">
   <input name="satelite-name" type="text" placeholder="Satelite to update" required><br>
   <textarea name="html-code" placeholder="<html>"></textarea><br>
   <textarea name="css-code" placeholder=".css"></textarea><br>
