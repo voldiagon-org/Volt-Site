@@ -5,4 +5,24 @@ body
   color: rgb(255, 255, 255);
 }
 
+.btn
+{
+    background-color: rgba(20, 0, 255, 1);
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #000000;
+    box-shadow: 1px 1px #ff1400;
+}
 
+.btn:hover
+{
+    background-color: rgba(20, 0, 255, 0.5);
+    cursor: pointer;
+    border-radius: 5
+}
+
+.btn:focus
+{
+    cursor: crosshair;
+    padding: 7px 17px
+}
