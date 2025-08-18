@@ -1,7 +1,6 @@
 body
 {
   background-color: rgb(0, 0, 0);
-  text-align: center;
   color: rgb(255, 255, 255);
 }
 
@@ -18,13 +17,13 @@ body
 {
     background-color: rgba(20, 0, 255, 0.5);
     cursor: pointer;
-    border-radius: 5
+    border-radius: 5;
 }
 
 .btn:focus
 {
     cursor: crosshair;
-    padding: 7px 17px
+    padding: 7px 17px;
 }
 
 div
