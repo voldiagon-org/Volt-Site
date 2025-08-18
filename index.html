@@ -23,8 +23,9 @@
     mixpanel.people.set({ '$name': 'Theo',
                           '$email': 'theoshi88@gmail.com',
     'rank': '4'
-    });
- 
+    mixpanel.track('Sign Up', {
+      'Signup Type': 'Referral'
+    }); 
   </script>
 </head>
     
