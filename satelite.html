@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Satelites</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    	//Import Mixpanel SDK
+    	import mixpanel from "mixpanel-browser";
+ 
+    	// Near entry of your product, init Mixpanel
+    	mixpanel.init("3831433", {
+      	debug: true,
+      	track_pageview: true,
+      	persistence: "localStorage",
+    	});
+  </script>
 </head>
 <body>
   <header>
