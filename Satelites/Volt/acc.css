@@ -1,8 +1,20 @@
 body
 {
-  border-left: 200px #000000;
-  border-right: 200px #000000;
   background-color: rgb(20, 0, 255);
   text-align: center;
   color: rgb(255, 255, 255);
+}
+
+aside
+{
+  border: 5px #000000;
+  padding: 50%;
+  color: #000000;
+}
+
+div
+{
+  background-color: rgb(20, 0, 255);
+  padding: 200px 400px;
+  border-radius: 10px
 }
