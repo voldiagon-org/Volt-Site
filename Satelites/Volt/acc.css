@@ -16,5 +16,10 @@ div
 {
   background-color: rgb(20, 0, 255);
   padding: 200px 400px;
-  border-radius: 10px
+  border-radius: 10px;
+}
+
+.image
+{
+  padding: 150px 300px
 }
