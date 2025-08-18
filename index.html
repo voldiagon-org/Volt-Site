@@ -7,6 +7,17 @@
   <link rel="icon" href="Vevi.png" type="image/png">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <script>
+    //Import Mixpanel SDK
+    import mixpanel from "mixpanel-browser";
+ 
+    // Near entry of your product, init Mixpanel
+    mixpanel.init("YOUR_TOKEN", {
+      debug: true,
+      track_pageview: true,
+      persistence: "localStorage",
+    });
+  </script>
 </head>
     
 <body>
