@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-uk">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QZ0EBS665"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-2QZ0EBS665');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volt Site - home</title>
     <link rel="icon" href="Vevi.png" type="image/png">
+	<script>
+    	//Import Mixpanel SDK
+    	import mixpanel from "mixpanel-browser";
+ 
+    	// Near entry of your product, init Mixpanel
+    	mixpanel.init("3831433", {
+      	debug: true,
+      	track_pageview: true,
+      	persistence: "localStorage",
+    	});
+  </script>
 </head>
 <body>
     <header>
