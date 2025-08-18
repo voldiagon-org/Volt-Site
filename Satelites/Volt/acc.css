@@ -1,5 +1,7 @@
 body
 {
+  border-left: 200px #000000;
+  border-right: 200px #000000;
   background-color: rgb(20, 0, 255);
   text-align: center;
   color: rgb(255, 255, 255);
