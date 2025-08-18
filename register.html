@@ -22,6 +22,17 @@
         });
     }
   </script>
+  <script>
+    	//Import Mixpanel SDK
+    	import mixpanel from "mixpanel-browser";
+ 
+    	// Near entry of your product, init Mixpanel
+    	mixpanel.init("3831433", {
+      	debug: true,
+      	track_pageview: true,
+      	persistence: "localStorage",
+    	});
+  </script>
 </head>
 <body>
   <h2>Register</h2>
