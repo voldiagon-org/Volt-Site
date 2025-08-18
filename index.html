@@ -1,64 +1,51 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="en">
 <head>
-    <meta charset="UTF-16">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volt Site</title>
-    <link rel="icon" href="Vevi.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
+  <meta charset="UTF-16">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volt Site</title>
+  <link rel="icon" href="Vevi.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
     
-<body style="font-family: Arial, sans-serif; background-color: #000000; color: #fefefe; margin: 0; padding: 0;">
-    <header>
-        <!-- Satellite button linking to satelite.html -->
-        <a href="satelite.html" class="satellite-link" tabindex="1">
-            <button class="satellite-btn" aria-label="Satellite">
-                <!-- A simple grayscale satellite icon as an inline SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="3"/>
-                    <rect x="16" y="2" width="6" height="6" rx="1" transform="rotate(45 16 2)" stroke="#fefefe"/>
-                    <line x1="12" y1="12" x2="21" y2="3"/>
-                    <line x1="12" y1="12" x2="3" y2="21"/>
-                    <line x1="15" y1="9" x2="21" y2="3"/>
-                    <line x1="9" y1="15" x2="3" y2="21"/>
-                </svg>
-            </button>
-        </a>
-        <h1>Volt Site</h1>
-        <nav id="nav">
-            <a href="content.html"><button class="btn">Content</button></a><br>
-            <a href="updates.html"><button class="btn">Update Log</button></a><br>
-            <a href="Volt-Site.zip" download><button class="btn">Volt-Site Offline</button></a><br>
-            <a href="https://github.com/marketplace/volt-site/upgrade/1/CUSTOMER_ACCOUNT_ID" target="_blank"><button class="btn">Get github app</button></a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Welcome to Volt Site</h2>
-            <p>This is a simple site built by <a href="https://github.com/v0lt99" target="_blank">Volt Flare</a>.</p>
-            <iframe src="https://bloxd.io" alt="Play bloxd with friends" style="height: 400px; width: 600px;">
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Volt Flare. All rights reserved.</p>
-        <!-- 100% privacy-first analytics -->
-        <script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    </footer>
-</body>
+<body>
+  <header>
+    <button class="satellite-btn" aria-label="Satellite"></button>
+    <h1>Volt Site</h1>
+    <nav id="nav">
+      <a href="content.html"><button class="btn">Content</button></a><br>
+      <a href="updates.html"><button class="btn">Update Log</button></a><br>
+      <a href="#" onclick="down()"><button class="btn">Volt-Site Offline</button></a><br>
+      <a href="https://github.com/marketplace/volt-site/upgrade/1/CUSTOMER_ACCOUNT_ID" target="_blank">
+        <button class="btn">Get github app</button>
+      </a>
+    </nav>
+  </header>
     
-<script>
-  function down() {
-    const link = document.createElement('a')
-    link.href = 'Volt-Site.zip'
-    link.download = 'Volt-Site.zip'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  <main>
+    <section>
+      <h2>Welcome to Volt Site</h2>
+      <p>This is a simple site built by <a href="https://github.com/v0lt99" target="_blank">Volt Flare</a>.</p>
+      <iframe src="https://bloxd.io" title="Play bloxd with friends" style="height: 400px; width: 600px;"></iframe>
+    </section>
+  </main>
+    
+  <footer>
+    <p>&copy; 2025 Volt Flare. All rights reserved.</p>
+  </footer>
+    
+  <script>
+    function down() {
+      const link = document.createElement('a');
+      link.href = 'Volt-Site.zip';
+      link.download = 'Volt-Site.zip';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
 
-    alert("✅ Successfully downloaded, Unzip & view 'Volt-Site.html' to view 'Volt-Site_Offline'")
-  }
-</script>
-    
+      alert("✅ Successfully downloaded. Unzip & open 'Volt-Site.html' to view 'Volt-Site_Offline'");
+    }
+  </script>
+</body>
 </html>
