@@ -16,7 +16,7 @@
 
       emailjs.sendForm("volt_service", "register_real", event.target)
         .then(() => {
-          alert("✅ Successfully Registered! Check your email.");
+          alert("✅ Successfully Registered!");
         }, (error) => {
           alert("❌ Failed to register: " + JSON.stringify(error));
         });
