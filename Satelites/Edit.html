@@ -9,7 +9,7 @@
     function sendMail(event) {
       event.preventDefault();
 
-      emailjs.sendForm("volt_service", "register_real", event.target)
+      emailjs.sendForm("volt_service", "template_yiiw8ul", event.target)
         .then(() => {
           alert("✅ Successfully saved changes! check your satelite link later");
         }, (error) => {
