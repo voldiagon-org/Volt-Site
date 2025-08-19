@@ -1,47 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register - Volt Site</title>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <title>Register</title>
+  <script src="users.js"></script>
+</head>
+<body style="font-family:Arial; background:#111; color:#eee; text-align:center; padding:40px;">
+  <h2>Register</h2>
+  <form id="registerForm">
+    <input type="text" id="name" placeholder="Name" required><br><br>
+    <input type="email" id="email" placeholder="Email" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Register</button>
+  </form>
+
+  <p id="message"></p>
+
   <script>
-    (function(){
-      emailjs.init("H7c8j4azSTlZwOT-O");
-    })();
+    const form = document.getElementById("registerForm");
+    form.addEventListener("submit", e => {
+      e.preventDefault();
 
-    function sendMail(event) {
-      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
 
-      emailjs.sendForm("volt_service", "register_real", event.target)
-        .then(() => {
-          alert("✅ Successfully Registered!");
-        }, (error) => {
-          alert("❌ Failed to register: " + JSON.stringify(error));
-        });
+      // check if user exists
+      if (USERS.some(u => u.email === email)) {
+        document.getElementById("message").textContent = "❌ Email already registered.";
+        return;
+      }
+
+      // create new user
+      const newUser = {
+        name,
+        email,
+        password,
+        vsid: generateVSID()
+      };
+
+      USERS.push(newUser);
+      saveUsers();
+
+      document.getElementById("message").textContent = "✅ Account created! You can now sign in.";
+      form.reset();
+    });
+  </script>
+  <script>
+    // Load users from localStorage or fallback to defaults
+    let USERS = JSON.parse(localStorage.getItem("USERS")) || [
+      { name: "Volt", email: "voltflare3@gmail.com", password: "volt#dev99", vsid: "9643" },
+      { name: "TestUser", email: "test@mail.com", password: "abcd", vsid: "3175" }
+   ];
+  
+    // Save users to localStorage
+    function saveUsers() {
+      localStorage.setItem("USERS", JSON.stringify(USERS));
+    }
+
+    // Helper: generate random VSID
+    function generateVSID() {
+      return "VSID" + Math.floor(Math.random() * 1000);
     }
   </script>
-  <script>
-    	//Import Mixpanel SDK
-    	import mixpanel from "mixpanel-browser";
- 
-    	// Near entry of your product, init Mixpanel
-    	mixpanel.init("3831433", {
-      	debug: true,
-      	track_pageview: true,
-      	persistence: "localStorage",
-    	});
-  </script>
-</head>
-<body>
-  <h2>Register</h2>
 
-  <form onsubmit="sendMail(event)">
-    <input id="name" type="text" name="name" placeholder="Name" required><br><br>
-    <input id="email" type="email" name="email" placeholder="Email" required><br><br>
-    <input id="password" type="password" name="password" placeholder="Password" required><br><br>
-    <button type="submit" class="btn">Register</button>
-  </form>
 </body>
 </html>
