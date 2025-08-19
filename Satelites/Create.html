@@ -9,7 +9,7 @@
     function sendMail(event) {
       event.preventDefault();
 
-      emailjs.sendForm("volt_service", "register_real", event.target)
+      emailjs.sendForm("volt_service", "template_yiiw8ul", event.target)
         .then(() => {
           alert("✅ Successfully saved changes! check your satelite link later");
         }, (error) => {
@@ -20,7 +20,7 @@
 </head>
 <link rel="stylesheet" href="style.css">
 <form onsubmit="sendMail(event)">
-  <input id="sn" name="satelite-name" type="text" placeholder="Satelite name" required><br>
-  <textarea id="sd" name="satelite-description" placeholder="Satelite description" required></textarea><br>
-  <button id="sm" type="submit" class="btn">Publish</button>
+  <input name="satelite-name" type="text" placeholder="Satelite name" required><br>
+  <textarea name="satelite-description" placeholder="Satelite description" required></textarea><br>
+  <button type="submit" class="btn">Publish</button>
 </form>
