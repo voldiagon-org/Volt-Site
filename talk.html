@@ -1,0 +1,80 @@
+<title>Contact Owner</title>
+<form>
+<link rel="stylesheet" href="style.css">
+<style>
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 999; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba(0,0,0,0.5); 
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto; 
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .modal input, .modal textarea, .modal button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    .modal textarea {
+      height: 100px;
+    }
+
+    modal-close {
+        padding: 10px 10px;
+        background-color: #1400ff;
+        color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn" onclick="openModal()">Talk to Owner</button>
+
+  <div id="popupModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <h3 style="color: #000000">Contact Owner</h3>
+
+      <!-- Replace the action URL below with your Formspree form link -->
+      <form   action="https://formspree.io/f/xwpqkaqj" method="POST">
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" placeholder="I love this site">
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" required placeholder="This site is the best, I love visiting it"></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("popupModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("popupModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("popupModal");
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>

@@ -1,0 +1,80 @@
+body
+{
+    font-family: Cursive, Sans-serif;
+    background-color: #000000;
+    color: #fefefe;
+}
+
+.btn
+{
+    background-color: rgba(20, 0, 255, 1);
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #000000;
+    box-shadow: 1px 1px #ff1400;
+}
+
+.btn:hover
+{
+    background-color: rgba(20, 0, 255, 0.5);
+    cursor: pointer;
+    border-radius: 5
+}
+
+.btn:focus
+{
+    cursor: crosshair;
+    padding: 7px 17px
+}
+
+/* Styles for the satellite button */
+.satellite-btn {
+    color: #fefefe;
+    width: 50px;
+    height: 50px;
+    border: 10px solid black;
+    background: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 10px; /* Optional: Adds some spacing from the very edge */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.satellite-btn svg {
+    color: #fefefe;
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: grayscale(100%);
+}
+        
+.satellite-btn:focus,
+.satellite-btn:hover {
+    outline: 2px solid #555;
+    cursor: pointer;
+}
+
+.image
+{
+    height: 100px;
+    width: 100px;
+}
+
+div
+{
+    background-color: rgb(20, 0, 255);
+    border-radius: 10px;
+    height: 200px;
+    width: 400px;
+}
+
+div:hover
+{
+    background-color: rgba(20, 0, 255, 0.5);
+}
+
